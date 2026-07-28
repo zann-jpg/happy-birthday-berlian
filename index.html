@@ -12,51 +12,79 @@
 
 <body>
 
-<!-- PASSWORD PAGE -->
+
+<!-- LOADING -->
+
+<div class="loading" id="loading">
+
+<h1>
+❤️ Preparing Surprise...
+</h1>
+
+<div class="loader"></div>
+
+</div>
+
+
+<!-- PASSWORD -->
 
 <div class="login" id="login">
 
-    <div class="box">
+<div class="box">
 
-        <h1>🔐 Private Page</h1>
+<h1>
+🔐 Private Page
+</h1>
 
-        <p>Masukkan password untuk membuka kejutan ❤️</p>
+<p>
+Masukkan password untuk Berlian ❤️
+</p>
 
-        <input 
-        type="password" 
-        id="password"
-        placeholder="Password">
 
-        <button onclick="cekPassword()">
-            Masuk ❤️
-        </button>
+<input 
+type="password"
+id="password"
+placeholder="Password">
 
-        <p id="error"></p>
 
-    </div>
+<button onclick="cekPassword()">
+Masuk ❤️
+</button>
+
+
+<p id="error"></p>
+
+</div>
 
 </div>
 
 
 
-<!-- MAIN PAGE -->
+<!-- HALAMAN UTAMA -->
 
 <div class="main" id="main">
 
 
 <audio id="music" loop>
-    <source src="music.mp3" type="audio/mp3">
+
+<source src="music.mp3">
+
 </audio>
+
+
+<button class="musicBtn" onclick="musik()">
+🎵
+</button>
+
 
 
 <div class="container">
 
+
 <h1>
-Happy Birthday
-<br>
-<span>
-BERLIAN NAYLA RAMADHANI ALMARIF
-</span>
+
+<span id="typing"></span>
+
 </h1>
 
 
@@ -66,26 +94,26 @@ class="foto">
 
 
 <h2>
-🎂 Selamat Ulang Tahun ❤️
+🎂 Happy Birthday Berlian ❤️
 </h2>
 
 
 <p class="ucapan">
 
-Semoga di umur yang baru ini,
-semua impian Berlian tercapai.
+Semoga hari spesial ini membawa
+banyak kebahagiaan.
 
-Semoga selalu diberikan kesehatan,
-kebahagiaan, dan dikelilingi orang
-yang menyayangi Berlian.
+Semoga semua mimpi Berlian
+bisa menjadi nyata.
 
-Tetap jadi perempuan yang luar biasa ❤️
+Tetap tersenyum dan menjadi
+orang yang luar biasa ❤️
 
 </p>
 
 
 <button onclick="surprise()">
-Klik Kejutan 🎁
+🎁 Klik Kejutan
 </button>
 
 
@@ -96,6 +124,13 @@ Klik Kejutan 🎁
 
 
 </div>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
 
 
 <script src="script.js"></script>
