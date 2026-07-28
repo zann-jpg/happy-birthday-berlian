@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fad0c4);
+    color:#fff;
+    overflow-x:hidden;
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+h2{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+p{
+    font-size:1.1rem;
+    line-height:1.8;
+    max-width:700px;
+}
+
+button{
+    margin-top:25px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:#ff4d6d;
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    background:#ff1744;
+}
+
+.card{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    max-width:800px;
+}
+.hero{
+    animation:fadeIn 1.5s ease;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:30px;
+    width:100%;
+    max-width:900px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+footer{
+    padding:40px;
+    text-align:center;
+    font-size:18px;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.heart{
+    position:fixed;
+    color:#ff1744;
+    font-size:24px;
+    animation:fall linear forwards;
+    top:-20px;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh);
+    }
+}
+.photoCard{
+    text-align:center;
+    margin:30px 0;
+}
+
+.photoCard img{
+    width:260px;
+    height:360px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
