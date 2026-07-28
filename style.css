@@ -512,5 +512,41 @@ translateY(100vh)
 rotate(720deg);
 
 }
+.pertanyaan{
 
+margin-top:25px;
+
+color:#ff4d88;
+
+}
+
+
+
+.akhir{
+
+font-size:20px;
+
+font-weight:bold;
+
+color:#ff4d88;
+
+}
+
+
+
+.jawaban button{
+
+margin:10px;
+
+}
+
+
+
+#jawaban{
+
+margin-top:20px;
+
+color:#ff4d88;
+
+    }
     }
