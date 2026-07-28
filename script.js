@@ -1,66 +1,105 @@
-const PASSWORD = "11111";
 
-const lockScreen = document.getElementById("lockScreen");
-const popup = document.getElementById("popup");
-const website = document.getElementById("website");
+const passwordBenar="berlian";
 
-const loginBtn = document.getElementById("loginBtn");
-const startBtn = document.getElementById("startBtn");
-const password = document.getElementById("password");
 
-loginBtn.onclick = function () {
+function cekPassword(){
 
-    if(password.value === PASSWORD){
 
-        lockScreen.style.display = "none";
-        popup.style.display = "flex";
+let password =
+document.getElementById("password").value;
 
-    }else{
 
-        alert("Password salah ❤️");
+if(password===passwordBenar){
 
-        password.value="";
 
-    }
+document.getElementById("login")
+.style.display="none";
 
-}
 
-startBtn.onclick = function(){
+document.getElementById("main")
+.style.display="block";
 
-    popup.style.display = "none";
 
-    website.style.display = "block";
 
-    document.body.style.overflowY="auto";
+document.getElementById("music")
+.play();
+
+
+buatHati();
+
 
 }
 
-const kata = [
+else{
 
-"🌷 Terima kasih sudah hadir di hidupku.",
-"💖 Semoga kamu selalu bahagia.",
-"🌸 Jangan lupa senyum ya.",
-"❤️ Aku selalu mendoakan yang terbaik buat kamu.",
-"✨ Kamu spesial."
 
-];
+document.getElementById("error")
+.innerHTML=
+"Password salah ❤️";
 
-function flower(){
-
-const random = Math.floor(Math.random()*kata.length);
-
-document.getElementById("flowerText").innerHTML = kata[random];
 
 }
 
-document.body.style.overflow="hidden";
-
-password.addEventListener("keypress",function(e){
-
-if(e.key==="Enter"){
-
-loginBtn.click();
 
 }
 
-});
+
+
+
+
+function surprise(){
+
+
+document.getElementById("pesan")
+.innerHTML=
+
+"💖 Terima kasih sudah menjadi seseorang yang spesial. Happy Birthday Berlian ❤️🎂";
+
+
+}
+
+
+
+function buatHati(){
+
+
+setInterval(()=>{
+
+
+let hati=document.createElement("div");
+
+
+hati.className="hati";
+
+hati.innerHTML="❤️";
+
+
+hati.style.left=
+Math.random()*100+"%";
+
+
+hati.style.fontSize=
+(Math.random()*30+10)+"px";
+
+
+hati.style.animationDuration=
+(Math.random()*3+3)+"s";
+
+
+document.body.appendChild(hati);
+
+
+
+setTimeout(()=>{
+
+hati.remove();
+
+},5000);
+
+
+
+},300);
+
+
+
+}
