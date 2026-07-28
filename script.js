@@ -358,3 +358,46 @@ document.getElementById("jawaban").innerHTML =
 "😊 Tidak apa-apa, yang penting kamu tahu kalau kamu adalah seseorang yang spesial.";
 
   }
+// BIKIN BINTANG
+
+
+function buatBintang(){
+
+
+let area =
+document.querySelector(".stars");
+
+
+for(let i=0;i<120;i++){
+
+
+let star =
+document.createElement("div");
+
+
+star.className="star";
+
+
+star.style.left =
+Math.random()*100+"%";
+
+
+star.style.top =
+Math.random()*100+"%";
+
+
+star.style.animationDelay =
+Math.random()*3+"s";
+
+
+area.appendChild(star);
+
+
+}
+
+
+}
+
+
+
+buatBintang();
