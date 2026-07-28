@@ -343,3 +343,18 @@ b.remove();
 
 
 }
+function jawabYa(){
+
+document.getElementById("jawaban").innerHTML =
+"❤️ Terima kasih sudah memberikan kesempatan. Semoga kita bisa membuat banyak cerita indah bersama ❤️";
+
+}
+
+
+
+function jawabNanti(){
+
+document.getElementById("jawaban").innerHTML =
+"😊 Tidak apa-apa, yang penting kamu tahu kalau kamu adalah seseorang yang spesial.";
+
+  }
