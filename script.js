@@ -223,3 +223,123 @@ document.getElementById("pesan")
 
 
 }
+// BUKA HADIAH
+
+function openGift(){
+
+
+document.getElementById("surat")
+.style.display="flex";
+
+
+buatConfetti();
+
+buatBunga();
+
+
+}
+
+
+
+// TUTUP SURAT
+
+function closeGift(){
+
+
+document.getElementById("surat")
+.style.display="none";
+
+
+}
+
+
+
+
+
+// CONFETTI
+
+function buatConfetti(){
+
+
+for(let i=0;i<80;i++){
+
+
+let c=document.createElement("div");
+
+
+c.className="confetti";
+
+
+c.innerHTML="🎉";
+
+
+c.style.left=
+Math.random()*100+"%";
+
+
+c.style.animationDuration=
+(2+Math.random()*3)+"s";
+
+
+document.body.appendChild(c);
+
+
+
+setTimeout(()=>{
+
+c.remove();
+
+},4000);
+
+
+}
+
+
+}
+
+
+
+
+// BUNGA
+
+function buatBunga(){
+
+
+setInterval(()=>{
+
+
+let b=document.createElement("div");
+
+
+b.className="bunga";
+
+
+b.innerHTML="🌸";
+
+
+b.style.left=
+Math.random()*100+"%";
+
+
+b.style.animationDuration=
+(4+Math.random()*5)+"s";
+
+
+
+document.body.appendChild(b);
+
+
+
+setTimeout(()=>{
+
+b.remove();
+
+},8000);
+
+
+
+},300);
+
+
+
+}
