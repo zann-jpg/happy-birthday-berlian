@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Berlian 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOADING -->
+  <section id="loading" class="screen loading-screen">
+    <div class="loading-flower">🌸</div>
+    <h1>Loading your surprise...</h1>
+    <div class="spinner"></div>
+  </section>
+
+  <!-- PASSWORD -->
+  <section id="login" class="screen login-screen hidden">
+    <div class="login-card">
+      <div class="mini-flower">🌷</div>
+      <h1>For You, Berlian</h1>
+      <p>Masukkan kode rahasia untuk membuka kejutan 💕</p>
+
+      <div id="pin" class="pin">••••••</div>
+
+      <div class="keypad">
+        <button onclick="pressKey('1')">1</button>
+        <button onclick="pressKey('2')">2</button>
+        <button onclick="pressKey('3')">3</button>
+        <button onclick="pressKey('4')">4</button>
+        <button onclick="pressKey('5')">5</button>
+        <button onclick="pressKey('6')">6</button>
+        <button onclick="pressKey('7')">7</button>
+        <button onclick="pressKey('8')">8</button>
+        <button onclick="pressKey('9')">9</button>
+        <button onclick="clearPin()">✕</button>
+        <button onclick="pressKey('0')">0</button>
+        <button onclick="checkPin()">↩</button>
+      </div>
+
+      <small>Hint: 111111 💕</small>
+      <p id="wrong" class="wrong"></p>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main id="main" class="hidden">
+
+    <header class="hero">
+      <div class="sparkles">✦ ✧ ✦</div>
+      <p class="eyebrow">🎂 YOUR SPECIAL DAY 🎂</p>
+      <h1>HAPPY BIRTHDAY<br><span>BERLIAN</span></h1>
+      <p class="hero-sub">Hari ini adalah hari yang spesial untuk dirayakan ✨</p>
+      <button class="music-btn" onclick="toggleMusic()">🎵 Musik</button>
+    </header>
+
+    <section class="quote card">
+      <p>“Semoga hari-harimu dipenuhi kebahagiaan, kesehatan, dan banyak alasan untuk tersenyum.” 🤍</p>
+    </section>
+
+    <!-- BOUQUET -->
+    <section class="section">
+      <p class="section-label">— A LITTLE GIFT —</p>
+      <h2>💐 Digital Bouquet</h2>
+      <p class="muted">Sentuh setiap bunga untuk membuka pesannya.</p>
+
+      <div class="bouquet">
+        <button class="flower" onclick="showFlower('🌷','Semoga setiap langkahmu tahun ini membawa hal-hal baik.')">🌷</button>
+        <button class="flower" onclick="showFlower('🌸','Semoga selalu punya alasan untuk tersenyum setiap hari.')">🌸</button>
+        <button class="flower" onclick="showFlower('🌻','Tetap bersinar dan jangan berhenti mengejar impianmu.')">🌻</button>
+        <button class="flower" onclick="showFlower('🌹','Semoga hari spesial ini menjadi awal dari banyak kenangan indah.')">🌹</button>
+        <button class="flower" onclick="showFlower('💮','Semoga semua doa baik menemukan jalannya kepadamu.')">💮</button>
+      </div>
+    </section>
+
+    <!-- LETTER -->
+    <section class="section card letter">
+      <p class="section-label">— FROM MY HEART —</p>
+      <h2>💌 Sebuah Pesan Untukmu</h2>
+      <div class="decor">✿ ❀ ✦ ❀ ✿</div>
+      <p>
+        Hari ini adalah hari ulang tahunmu. Semoga bertambahnya usia membawa
+        lebih banyak pengalaman baik, teman-teman yang tulus, dan kesempatan
+        untuk mewujudkan hal-hal yang kamu impikan.
+      </p>
+      <p>
+        Terima kasih sudah menjadi seseorang yang punya cerita dan warna
+        tersendiri. Tetap jadi Berlian yang ceria, kuat, dan terus berkembang.
+      </p>
+      <p>
+        Selamat ulang tahun. Semoga tahun ini jauh lebih baik dari tahun
+        sebelumnya. 🎂✨
+      </p>
+      <div class="signature">— A little birthday message 🤍</div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="section">
+      <p class="section-label">— OUR JOURNEY —</p>
+      <h2>📝 Cerita Kecil</h2>
+
+      <div class="timeline">
+        <article>
+          <span>✨</span>
+          <div><h3>Awal Cerita</h3><p>Sebuah momen sederhana yang kemudian menjadi kenangan.</p></div>
+        </article>
+        <article>
+          <span>💬</span>
+          <div><h3>Obrolan Pertama</h3><p>Hal kecil yang membuat sebuah cerita dimulai.</p></div>
+        </article>
+        <article>
+          <span>😂</span>
+          <div><h3>Tawa yang Berkesan</h3><p>Karena beberapa kenangan memang paling mudah diingat lewat tawa.</p></div>
+        </article>
+        <article>
+          <span>🎂</span>
+          <div><h3>Hari Spesial Ini</h3><p>Hari ini kita merayakan ulang tahun Berlian. 🥳</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MUSIC -->
+    <section class="section card player">
+      <p class="section-label">— OUR SONGS —</p>
+      <h2>🎵 Special Playlist</h2>
+      <p class="muted">Tambahkan file <b>music.mp3</b> milikmu.</p>
+      <audio id="music" controls loop>
+        <source src="music.mp3" type="audio/mpeg">
+      </audio>
+      <button class="play-main" onclick="toggleMusic()">▶ / ⏸ Putar Musik</button>
+    </section>
+
+    <!-- JAR -->
+    <section class="section card jar-section">
+      <p class="section-label">— FROM MY HEART TO YOURS —</p>
+      <h2>🫙 Jar of Wishes</h2>
+      <p class="muted">Tekan tombol untuk mengambil satu pesan.</p>
+      <div id="jar" class="jar">🫙</div>
+      <button class="primary" onclick="pickWish()">✨ Ambil Pesan</button>
+      <p id="wish" class="wish"></p>
+    </section>
+
+    <footer>
+      <div>🌸 ✦ 🌷 ✦ 🌸</div>
+      <h2>Happy Birthday, Berlian 🎂</h2>
+      <p>Semoga selalu ada banyak hal baik di depanmu. 🤍</p>
+    </footer>
+  </main>
+
+  <div id="flowerModal" class="modal hidden">
+    <div class="modal-card">
+      <button class="close" onclick="closeFlower()">×</button>
+      <div id="modalFlower" class="modal-flower">🌸</div>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
